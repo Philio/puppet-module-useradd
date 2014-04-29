@@ -4,7 +4,7 @@ source ''
 author 'Phil Bayfield'
 license ''
 summary 'A puppet module for adding users'
-description 'Extends existing functions to perform tasks such as adding SSH keys in a simplified way'
+description 'Extends existing functions to perform tasks such as adding SSH keys in a simplified way.'
 project_page ''
 
 ## Add dependencies, if any:
