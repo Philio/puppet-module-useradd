@@ -13,7 +13,7 @@ define useradd::key ($user) {
     
     # If key is set then create the key
     if has_key($name, 'key') {
-      ssh_authorized_key { "${user}_${type}_${name['name']}":
+      ssh_authorized_key { "${user}_${name['type']}_${name['name']}":
 		    ensure => present,
 		    user => $user,
 		    type => $name['type'],
