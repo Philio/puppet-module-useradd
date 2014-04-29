@@ -1,0 +1,21 @@
+{
+  "author": "Phil Bayfield",
+  "checksums": {
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "manifests/init.pp": "7d12f41eaf5a4053963ef81419fdd8cc",
+    "Modulefile": "71a3844af8aa9cbf279b8bdba0ac68e5",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "tests/init.pp": "cd9c2a3d30e65fd5d5731f62be7f6fc6",
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "README.markdown": "48b1cbb34c55b22e29f52fe3906c42a8"
+  },
+  "dependencies": [],
+  "description": "Extends existing functions to perform tasks such as adding SSH keys in a simplified way",
+  "license": "",
+  "name": "codacity-useradd",
+  "project_page": "",
+  "source": "",
+  "summary": "A puppet module for adding users",
+  "types": [],
+  "version": "0.1.0"
+}
