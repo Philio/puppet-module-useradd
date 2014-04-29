@@ -12,6 +12,6 @@ define useradd (
   $keys = []
 ) {
   useradd::key { $keys:
-    user => $user,
+    key_user => $user,
   }
 }

@@ -1,4 +1,4 @@
-define useradd::key ($user) {
+define useradd::key ($key_user) {
   if is_hash($name) {
     # If type is defined set it
     if !has_key($name, 'type') {
@@ -7,7 +7,7 @@ define useradd::key ($user) {
     
     # If key name is defined set it
     if !has_key($name, 'name') {
-      $name['name'] = "$user@puppet"
+      $name['name'] = "$key_user@puppet"
     }
     
     notify {$name['type']:}
