@@ -1,13 +1,13 @@
-define useradd::key ($key) {
-  if is_hash($key) {
-    if !has_key($key, 'type') {
-      $key['type'] = 'ssh-rsa'
+define useradd::key {
+  if is_hash($name) {
+    if !has_key($name, 'type') {
+      $name['type'] = 'ssh-rsa'
     }
-    if !has_key($key, 'name') {
-      $key['name'] = "$name@puppet"
+    if !has_key($name, 'name') {
+      $name['name'] = "$name@puppet"
     }
-    notice($key['name'])
-    notice($key['type'])
-    notice($key['key'])
+    notice($name['name'])
+    notice($name['type'])
+    notice($name['key'])
   }
 }
