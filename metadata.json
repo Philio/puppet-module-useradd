@@ -2,10 +2,11 @@
   "author": "Phil Bayfield",
   "checksums": {
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
-    "manifests/init.pp": "1ff83d9956b7111a85a4a7cb62e47eba",
+    "manifests/init.pp": "9d4829540513a2885b6b20383247a195",
     "Modulefile": "91b20788a60e94adb8129f0ff4f1e270",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "manifests/key.pp": "6c45f6417fdc45835bfc4b8e9a1655ad",
     "README.markdown": "48b1cbb34c55b22e29f52fe3906c42a8"
   },
   "dependencies": [

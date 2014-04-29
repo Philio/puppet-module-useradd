@@ -11,19 +11,5 @@ define useradd (
   $create_home = true,
   $keys = []
 ) {
-  each($keys) |$key| {
-    if is_hash($key) {
-      if !has_key($key, 'type') {
-        $key['type'] = 'ssh-rsa'
-      }
-
-      if !has_key($key, 'name') {
-        $key['name'] = "$name@puppet"
-      }
-
-      notice($key['key'])
-      notice($key['name'])
-      notice($key['type'])
-    }
-  }
+  useradd::key { $keys: }
 }
