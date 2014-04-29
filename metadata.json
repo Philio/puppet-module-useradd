@@ -7,7 +7,7 @@
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
     "manifests/key.pp": "3461a0bbde07f30053a3cf9ff30f7427",
-    "README.markdown": "7a1bad934fd262b2731e51a2ea93f9cc"
+    "README.markdown": "cffdc234b717a3965c649f3c519d426b"
   },
   "dependencies": [
     {
