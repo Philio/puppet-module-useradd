@@ -1,4 +1,5 @@
 define useradd::key {
+  notify {"In useradd::key.pp":}
   if is_hash($name) {
     if !has_key($name, 'type') {
       $name['type'] = 'ssh-rsa'
@@ -6,8 +7,8 @@ define useradd::key {
     if !has_key($name, 'name') {
       $name['name'] = "$name@puppet"
     }
-    notice($name['name'])
-    notice($name['type'])
-    notice($name['key'])
+    notify {$name['name']:}
+    notify {$name['type']:}
+    notify {$name['key']:}
   }
 }
