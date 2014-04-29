@@ -1,18 +1,18 @@
-define useradd::key {
+define useradd::key ($key = '', $key_type = 'ssh-rsa', $key_name = '') {
   notify {"In useradd::key.pp":}
   if is_hash($name) {
-    # If type isn't set default to RSA
-    if !has_key($name, 'type') {
-      $name['type'] = 'ssh-rsa'
+    # If type is defined set it
+    if has_key($name, 'type') {
+      $key_type = $name['type']
     }
     
-    # If key name isn't set generate one
+    # If key name is defined set it
     if !has_key($name, 'name') {
-      $name['name'] = "$name[name]@puppet"
+      $key_name = "${name['name']}@puppet"
     }
-    notify {$name['undef']:}
-    notify {$name['name']:}
-    notify {$name['type']:}
-    notify {$name['key']:}
   }
+  
+  notify {$key:}
+  notify {$key_type:}
+  notify {$key_name:}
 }
