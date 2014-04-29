@@ -11,5 +11,6 @@ define useradd (
   $create_home = true,
   $keys = []
 ) {
+  notice('I am here!');
   useradd::key { $keys: }
 }
