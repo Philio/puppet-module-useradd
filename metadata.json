@@ -5,7 +5,6 @@
     "manifests/init.pp": "4751a0352ca8d57714946156021594a4",
     "Modulefile": "defd47c9ddf441452c4be6f46f5412fd",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
-    "tests/init.pp": "7215ee9c7d9dc229d2921a40e899ec5f",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
     "README.markdown": "48b1cbb34c55b22e29f52fe3906c42a8"
   },
