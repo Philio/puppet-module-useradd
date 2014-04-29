@@ -11,7 +11,8 @@ define useradd (
   $create_home = true,
   $keys = []
 ) {
+  
   useradd::key { $keys:
-    key_user => $user,
+    user => $user,
   }
 }
