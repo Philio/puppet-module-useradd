@@ -5,8 +5,9 @@ define useradd::key {
       $name['type'] = 'ssh-rsa'
     }
     if !has_key($name, 'name') {
-      $name['name'] = "$name@puppet"
+      $name['name'] = "$name[name]@puppet"
     }
+    notify {$name['undef']:}
     notify {$name['name']:}
     notify {$name['type']:}
     notify {$name['key']:}
