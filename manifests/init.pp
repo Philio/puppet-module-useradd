@@ -11,6 +11,7 @@ define useradd (
   $create_home = true,
   $keys = []
 ) {
-  notify {"In useradd::init.pp":}
-  useradd::key { $keys: }
+  useradd::key { $keys:
+    user => $user,
+  }
 }
