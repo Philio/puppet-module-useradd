@@ -1,4 +1,4 @@
-# useradd #
+# Useradd Puppet Module #
 
 A puppet module for adding users
 
