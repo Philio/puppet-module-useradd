@@ -17,9 +17,6 @@
 #
 # The type and name are optional and will default to ssh-rsa and
 # username@puppet if ommitted.
-#
-# Currently the contents of each key hash must be unique, the easiest way
-# to avoid problems is to use a unique name for each key.
 define useradd (
   $ensure = present,
   $comment = '',
