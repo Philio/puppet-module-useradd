@@ -21,34 +21,24 @@
 # Currently the contents of each key hash must be unique, the easiest way
 # to avoid problems is to use a unique name for each key.
 define useradd (
-  $user = $title,
-  $password = '!',
+  $ensure = present,
   $comment = '',
+  $password = '!',
   $shell = '/bin/bash',
-  $create_home = true,
+  $managehome = true,
   $keys = []
 ) {
   # Add user account
-  if $create_home == true {
-    user { $name:
-      ensure     => present,
-      name       => $name,
-      comment    => $comment,
-      shell      => $shell,
-      home       => "/home/$name",
-      managehome => true,
-    }
-  } else {
-    user { $name:
-      ensure  => present,
-      name    => $name,
-      comment => $comment,
-      shell   => $shell,
-    }
+  user { $title:
+    ensure     => $ensure,
+    comment    => $comment,
+    password   => $password,
+    shell      => $shell,
+    managehome => $managehome,
   }
   
   # Add SSH keys
   useradd::key { $keys:
-    user => $user,
+    user => $title,
   }
 }
