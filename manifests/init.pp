@@ -44,6 +44,9 @@ define useradd (
     }
     file { "${home_real}/.ssh": 
       ensure => directory,
+      owner => $title,
+      group => $title,
+      require => User[$title],
     }
     useradd::key { $keys:
       user => $title,
