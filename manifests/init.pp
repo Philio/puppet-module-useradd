@@ -46,6 +46,7 @@ define useradd (
       ensure => directory,
       owner => $title,
       group => $title,
+      mode => 700,
       require => User[$title],
     }
     useradd::key { $keys:
