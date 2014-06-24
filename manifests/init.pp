@@ -23,6 +23,7 @@ define useradd (
   $password = '!',
   $shell = '/bin/bash',
   $managehome = true,
+  $home = undef,
   $keys = []
 ) {
   # Add user account
@@ -32,6 +33,7 @@ define useradd (
     password   => $password,
     shell      => $shell,
     managehome => $managehome,
+    home       => $home,
   }
   
   # Add SSH keys
