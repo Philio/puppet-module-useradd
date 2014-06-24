@@ -37,7 +37,18 @@ define useradd (
   }
   
   # Add SSH keys
-  useradd::key { $keys:
-    user => $title,
+  if $keys {
+    $home_real = $home ? {
+      undef => "/home/${title}",
+      default => $home,
+    }
+    file { "${home_real}/.ssh": 
+      ensure => directory,
+    }
+    useradd::key { $keys:
+      user => $title,
+      require => File["${home_real}/.ssh"],
+    }
   }
+
 }
