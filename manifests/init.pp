@@ -9,7 +9,7 @@
 #
 # keys => [
 #   {
-#     key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCi8+wR3SrNXcRpoyM73CpYL5zPZ+w4uVyHVvYgR76d6GHEQDnWwp1Ln0B5mkKLxbC+enum0sfi5wX//tZW0E+JV34NlruJ4dsFkAY6wwpqKJTv3lUZwJvYD72mexyHMQ0VJ510KFHGVhil/XIk0MnvFPOq904DzS4pYGhUn2QSTThyk7XWc6NZFEX9PMsvtoBnPv7mGi/x9XWqGOsEKTV8s+uO/B09fy/vZkUu1ze/dHitrcZVDHVZVwT+6T3g3K/IY5Cz+acbyFHs/yoXk9RgVafNTTkvTeufTeRc8cWIfX9oHY8pinw5kTx9pNlQwtSKz+hihCnBRk/Y8NZPBQHl',
+#     key => 'AAAAAAAA',
 #     type => 'ssh-rsa',
 #     name => 'phil@codacity.co.uk',
 #   }
@@ -28,16 +28,16 @@ define useradd (
 ) {
   # Add user account
   user { $title:
-    ensure     => $ensure,
-    comment    => $comment,
-    password   => $password,
-    shell      => $shell,
+    ensure => $ensure,
+    comment => $comment,
+    password => $password,
+    shell => $shell,
     managehome => $managehome,
-    home       => $home,
+    home => $home,
   }
   
   # Add SSH keys
-  if $keys {
+  if $ensure == present and $keys  {
     $home_real = $home ? {
       undef => "/home/${title}",
       default => $home,

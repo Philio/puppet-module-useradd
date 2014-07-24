@@ -2,7 +2,7 @@
   "author": "Phil Bayfield",
   "checksums": {
     "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
-    "manifests/init.pp": "04e86642481f8afe779acee307942d73",
+    "manifests/init.pp": "9a2329a6b1d89900f2f6203e158a2f08",
     "Modulefile": "91b20788a60e94adb8129f0ff4f1e270",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
